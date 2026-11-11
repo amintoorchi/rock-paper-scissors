@@ -9,8 +9,8 @@ def main():
     while True:
         choice = questionary.select("Welcome to the best game in the world :))",choices=["Play Game", "Exit Game"],).ask()
 
-        if choice is None or choice == "Exit Game":
-            print("Bye :)")
+        if choice == "Exit Game":
+            print("Bye :)))")
             break
         if choice == "Play Game":
             game_logic()
@@ -20,7 +20,7 @@ def game_logic():
     items = ["Rock", "Paper", "Scissors"]
     sys_selection = random.choice(items)
 
-    user_select = questionary.select("choose your move",choices=[*items, "Back To Main Menu"],).ask()
+    user_select = questionary.select("choose your move", choices=[*items, "Back To Main Menu"],).ask()
 
     if user_select == "Back To Main Menu":
         return
@@ -37,5 +37,6 @@ def game_logic():
         console.print("Your Loseeeeee :((", style="bold red")
     
 
+#TODO research about this part in python ...
 if __name__ == "__main__":
     main()
