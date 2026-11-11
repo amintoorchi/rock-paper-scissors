@@ -20,17 +20,17 @@ def game_logic():
     items = ["Rock", "Paper", "Scissors"]
     sys_selection = random.choice(items)
 
-    user_select = questionary.select("choose your move", choices=[*items, "Back To Main Menu"],).ask()
+    user_selection = questionary.select("choose your move", choices=[*items, "Back To Main Menu"],).ask()
 
-    if user_select == "Back To Main Menu":
+    if user_selection == "Back To Main Menu":
         return
     
-    if user_select == sys_selection:
+    if user_selection == sys_selection:
         console.print("Its a draw :)", style="bold red")
     elif (
-        (user_select == "Rock" and sys_selection == "Scissors")
-        or (user_select == "Paper" and sys_selection == "Rock")
-        or (user_select == "Scissors" and sys_selection == "Paper")
+        (user_selection == "Rock" and sys_selection == "Scissors")
+        or (user_selection == "Paper" and sys_selection == "Rock")
+        or (user_selection == "Scissors" and sys_selection == "Paper")
     ):
         console.print("Your Winnnnnnn :))", style="bold red")
     else:
