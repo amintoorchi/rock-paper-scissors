@@ -13,4 +13,4 @@ From the project root, run:
 
 ```bash
 uv sync
-uv run python -m rock_paper_scissors.main
+uv run src/rock-paper-scissors/main.py
