@@ -14,7 +14,7 @@ def main():
             break
         if choice == "Play Game":
             game_logic()
-            
+
 
 def game_logic():
     items = ["Rock", "Paper", "Scissors"]
@@ -24,18 +24,18 @@ def game_logic():
 
     if user_selection == "Back To Main Menu":
         return
-    
+
     if user_selection == sys_selection:
-        console.print("Its a draw :)", style="bold red")
+        console.print("Its a draw :)", style="bold yellow")
     elif (
         (user_selection == "Rock" and sys_selection == "Scissors")
         or (user_selection == "Paper" and sys_selection == "Rock")
         or (user_selection == "Scissors" and sys_selection == "Paper")
     ):
-        console.print("Your Winnnnnnn :))", style="bold red")
+        console.print("Your Winnnnnnn :))", style="bold green")
     else:
         console.print("Your Loseeeeee :((", style="bold red")
-    
+
 
 #TODO research about this part in python ...
 if __name__ == "__main__":
